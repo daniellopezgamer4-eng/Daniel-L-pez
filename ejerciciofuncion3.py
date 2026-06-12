@@ -8,13 +8,16 @@ Juegos={
 def agregar():
     Juegos["Sandbox"]="Minecraft"
 
-# def borrar():
-#     eliminar=input("Que desea eliminar?")
-#     if eliminar == Juegos :
-#         del Juegos[eliminar]
+def borrar():
+    eliminar=input("Que desea eliminar?")
+    if eliminar in Juegos.keys() :
+        del Juegos[eliminar]
 
 def actualizar():
-    Juegos["Rpg"]="Final Fantasy Remake Integrade"
+    actualizar=input("Que genero desea actualizar?") 
+    if actualizar in Juegos.values() :
+        Juegos[actualizar] 
+         
 
 def mostrar() :
     print(Juegos)
@@ -31,7 +34,7 @@ while True:
     if op == 1 : 
         agregar()
     elif op == 2 :
-        # borrar()
+        borrar()
     elif op == 3 :
         actualizar()
     elif op == 4 :
